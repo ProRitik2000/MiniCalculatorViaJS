@@ -1,0 +1,55 @@
+<!-- //Mini Calculating device via javascript -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="fno" placeholder="Enter 1st no." step="any">
+        <select id="ope">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">x</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" id="sno" placeholder="Enter 2nd no." step="any">
+        <br><br>
+        <button onclick="Calc()">Calculate</button>
+        <input type="text" readonly=" " id="result">
+        <script>
+            function Calc() {
+                var a = document.getElementById("fno").value;
+                var b = document.getElementById("sno").value;
+                var ope = document.getElementById("ope").value;
+                if (ope == '+') {
+                    var result = parseInt(a) + parseInt(b);
+                }
+
+                if (ope == '-') {
+                    var result = parseInt(a) - parseInt(b);
+                }
+
+                if (ope == '*') {
+                    var result = parseInt(a) * parseInt(b);
+                }
+
+                if (ope == '/') {
+                    var result = parseInt(a) / parseInt(b);
+                }
+
+                if (ope == '%') {
+                    var result = parseInt(a) % parseInt(b);
+                }
+                document.getElementById('result').value = result;
+            }
+        </script>
+</body>
+</div>
+
+</html>
